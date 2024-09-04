@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+        width: 100vw;
+        margin: 0px 10px 0px 10px;
+      "
+    >
+      <img
+        style="width: 75px; padding: 0px 0px 0px 15px"
+        src="./logo.svg"
+        alt=""
+      />
+      <div style="width: 50vw">
+        <ul
+          style="
+            display: flex;
+            justify-content: flex-start;
+            gap: 25px;
+            list-style-type: none;
+            align-items: center;
+            padding: 10px;
+          "
+        >
+          <li>Features <img src="./icon-arrow-down.svg" alt="" /></li>
+          <li>Company <img src="./icon-arrow-down.svg" alt="" /></li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: flex-end;
+          margin: 0px 20px 0px 0px;
+          width: 35vw;
+        "
+      >
+        <button
+          style="
+            border: none;
+            padding: 4px;
+            margin-right: 20px;
+            background-color: white;
+          "
+        >
+          login
+        </button>
+        <button
+          style="
+            border: 1px solid black;
+            background-color: white;
+            padding: 2px 15px 2px 15px;
+            border-radius: 10px;
+          "
+        >
+          Register
+        </button>
+      </div>
+    </nav>
+
+    <main
+      style="
+        display: flex;
+        justify-content: center;
+        padding: 70px 130px 20px 130px;
+        height: 80vh;
+      "
+    >
+      <div style="width: 40%; height: 100%; padding-top: 88px">
+        <p
+          style="
+            font-size: 60px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 45px;
+            margin-bottom: 40px;
+          "
+        >
+          Make <br />
+          remote work
+        </p>
+        <p style="font-size: 16px; color: gray; margin-bottom: 45px">
+          Get your team in sync, no matter your location. <br />
+          Streamline processes, create team rituals, and <br />
+          watch productivity soar.
+        </p>
+        <button
+          style="
+            color: white;
+            background-color: black;
+            padding: 4px 20px 4px 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+          "
+        >
+          learn more
+        </button>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 20px;
+          "
+        >
+          <img style="width: 70px" src="./client-databiz.svg" alt="" />
+          <img style="width: 70px" src="./client-audiophile.svg" alt="" />
+          <img style="width: 70px" src="./client-meet.svg" alt="" />
+          <img style="width: 70px" src="./client-maker.svg" alt="" />
+        </div>
+      </div>
+      <img style="width: 400px" src="./image-hero-desktop.png" alt="" />
+    </main>
+  </body>
+</html>

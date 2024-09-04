@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+        border: 1px solid black;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 25vw;
+        "
+      >
+        <img style="width: 20px" src="./facebookLogo.png" alt="" />
+      </div>
+      <div
+        style="display: flex; justify-content: start; width: 50vw; gap: 30px"
+      >
+        <a href="">Home</a>
+        <a href="">Shop</a>
+        <a href="">Contact</a>
+        <a href="">Help</a>
+      </div>
+      <div style="display: flex; justify-content: space-around; align-items: center; width: 25vw">
+        <p>Account</p>
+        <p>3 items</p>
+        <img
+          style="border-radius: 50%; width: 20px; border: 1px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); object-fit: cover;"
+          src="./cat.png"
+          alt=""
+        />
+      </div>
+    </nav>
+
+    <main style="display: flex; justify-content: center; padding: 20px 80px 20px 80px">
+      <div style="
+      width: 40%; border: 1px solid #F8F9FA; border-radius: 20px; background-color:#F8F9FA
+      ;padding: 20px 50px 20px 50px;">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+          "
+        >
+          <p>Account</p>
+          <p>Shipping</p>
+          <p>Payment</p>
+        </div>
+        <p style="padding: 20px">Account details</p>
+        <form style="padding: 20px" action="">
+          <p style="font-size: 12px; color: gray; margin-bottom: 5px">
+            email address
+          </p>
+          <input
+            style="width: 100%; padding: 4px; font-size: 12px; margin-bottom: 5px; background-color: #E9ECEF;border: 1px solid #E9ECEF;"
+            type="email"
+            placeholder="email@myemail.com"
+          />
+          <p style="font-size: 12px; color: gray; margin-bottom: 5px">
+            Password
+          </p>
+          <input
+            style="width: 100%; padding: 4px; font-size: 12px; background-color: #E9ECEF;border: 1px solid #E9ECEF;"
+            type="password"
+            placeholder=""
+          />
+          <div
+            style="
+              display: flex;
+              justify-content: flex-end;
+              gap: 10px;
+              margin-top: 15px;
+              margin-bottom: 20px;
+            "
+          >
+            <button style="background-color: #F8F9FA; border: none; padding: 8px">
+              Register for account
+            </button>
+            <button
+              style="
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                padding: 8px;
+                border-radius: 8px;
+              "
+            >
+              login
+            </button>
+          </div>
+          <hr />
+          <div
+            style="
+              display: flex;
+              justify-content: flex-end;
+              gap: 10px;
+              margin-top: 15px;
+            "
+          >
+            <button style="background-color: #F8F9FA; border: none; padding: 8px">
+              Cancel Order
+            </button>
+            <button
+              style="
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                padding: 8px;
+                border-radius: 8px;
+              "
+            >
+              Shipping details
+            </button>
+          </div>
+        </form>
+      </div>
+      <div style="width: 35%; border: 1px solid #F8F9FA;
+      border-radius:20px ; padding: 30px; background-color:#F8F9FA">
+        <p>Order Summary</p>
+        <img
+          style=" width: 100%; margin-top: 20px; border-radius: 8px"
+          src="./headphones.jpeg"
+          alt=""
+        />
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+          "
+        >
+          <p style="font-weight: 800">
+            Sony wireless headphones <br />
+            &#8364;320.45
+          </p>
+          <p
+            style="
+              padding-left: 10px;
+              padding-right: 10px;
+              background-color: rgb(195, 193, 193);
+              border-radius: 20%;
+            "
+          >
+            -
+          </p>
+          <p>1</p>
+          <p
+            style="
+              padding-left: 10px;
+              padding-right: 10px;
+              background-color: rgb(195, 193, 193);
+              border-radius: 20%;
+            "
+          >
+            +
+          </p>
+        </div>
+        <p
+          style="
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: gray;
+            font-size: 12px;
+          "
+        >
+          Gift card / Discount code
+        </p>
+        <form
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+          action=""
+        >
+          <input
+            style="padding: 4px; font-size: 12px; margin-bottom: 5px; background-color: #E9ECEF;border: 1px solid #E9ECEF;"
+            type="text"
+          />
+          <button
+            style="
+              border: 1px solid rgb(50, 50, 245);
+              padding: 4px 15px 4px 15px;
+              border-radius: 15%;
+            "
+          >
+            Apply
+          </button>
+        </form>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0px 8px 0px;
+          "
+        >
+          <p>Subtotal</p>
+          <p>&#8364;316.55</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0px 8px 0px;
+          "
+        >
+          <p>Tax</p>
+          <p>&#8364;3.45</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0px 8px 0px;
+          "
+        >
+          <p>Shipping</p>
+          <p style="color: rgb(0, 217, 255);">free</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0px 8px 0px;
+          "
+        >
+          <p>Total</p>
+          <p>&#8364;320.45</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
