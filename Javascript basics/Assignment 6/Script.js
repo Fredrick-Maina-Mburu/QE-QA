@@ -4,8 +4,7 @@
 // 3.	Sort the filtered numbers in ascending order.
 // 4.	Return the sorted array of numbers.
 function filterAndSort(filterfn, ...numbers) {
-  const arr = numbers;
-  return arr.filter(filterfn).sort();
+  return numbers.filter(filterfn).sort();
 }
 
 const isEven = (num) => num % 2 === 0;
@@ -23,9 +22,6 @@ const obj1 = { a: 1, b: 2 };
 const obj2 = { c: 3, b: 4 };
 console.log(mergeObjects(obj1, obj2));
 
-function mergeObjects(...objs) {
-  return objs.reduce((acc, obj) => ({ ...acc, ...obj }), {});
-}
 
 // combineArrays Function: Create a function called combineArrays that takes multiple arrays as arguments. The function should:
 // 1.	Use the spread operator to combine all arrays into one.
@@ -49,7 +45,6 @@ console.log(combineArrays(arr1, arr2, arr3));
 // The function should:
 // •	Use the spread operator to create a new array of objects with only the specified properties.
 // •	Return the new array of objects.
-
 function extractProperties(objects, ...properties) {
   return objects.map((obj) => {
      return properties.reduce((acc, prop) => ({...acc, [prop]: obj[prop]}),{})
