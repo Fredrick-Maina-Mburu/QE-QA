@@ -128,12 +128,12 @@ const users = [
   },
 ];
 
-function analysisDasboard(myObj){
-   // Calculate the current timestamp (one week ago)
+function analysisDasboard(arr){
+
    const weekAgo = new Date();
    weekAgo.setDate(weekAgo.getDate() - 7);
 
-   const activeUsers = myObj.filter((user) => user.posts.some((post) => new Date(post.timestamp) > weekAgo))
+   const activeUsers = arr.filter((user) => user.posts.some((post) => new Date(post.timestamp) > weekAgo))
 
    const popularPosts = activeUsers.flatMap((user) => user.posts.filter((post) => post.likes >= 10))
 
@@ -149,4 +149,3 @@ function analysisDasboard(myObj){
 }
 
 console.log(analysisDasboard(users))
-

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: normal;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+main {
+  padding: 80px;
+}
+#event-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .event-card {
+    text-align: center;
+    width: 300px;
+    margin: 12px;
+    img {
+      width: 300px;
+      height: 200px;
+      background-size: cover;
+      overflow: hidden;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    p {
+      margin: 4px;
+    }
+    button {
+      font-size: 15px;
+      color: white;
+      background-color: blue;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  }
+}
