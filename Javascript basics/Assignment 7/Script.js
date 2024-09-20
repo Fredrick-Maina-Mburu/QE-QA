@@ -4,6 +4,7 @@ const priceFilter = document.getElementById("price-filter");
 const locationFilter = document.getElementById("location-filter");
 
 let events = [];
+let favorites = {}
 
 async function fetchEvents() {
   try {
@@ -19,9 +20,12 @@ function renderEvents(events) {
   const eventList = document.getElementById("event-list");
   eventList.innerHTML = "";
 
+
   events.forEach((event) => {
     const eventCard = document.createElement("div");
     eventCard.classList.add("event-card");
+
+    const isFavorite = favorites[event.id] ? "Remove from favorite" : "Buy now";
 
     eventCard.innerHTML = `
             <img src="${event.imageUrl}" alt="${event.title}">
@@ -29,11 +33,64 @@ function renderEvents(events) {
             <p>Price: $${event.price}</p>
             <p>Date: ${event.date}</p>
             <p>${event.location}</p>
-            <button class="favorite-btn" data-id="${event.id}">Buy now</button>
+            <button class="favorite-btn" data-id="${event.id}">${isFavorite}</button>
         `;
 
     eventList.appendChild(eventCard);
   });
+  document.querySelectorAll(".favorite-btn").forEach((button) => {
+    button.addEventListener('click', (event) => {
+      const id = event.target.getAttribute('data-id')
+
+      if(button.textContent == "Buy now"){
+        button.textContent="Remove from favorite"
+        handleAddtoFavorite(id)
+      } else {
+        button.textContent="Buy now"
+        removeFromFavorite(id)
+      }
+      
+    })   
+  })
+}
+
+function handleAddtoFavorite(id){
+  const eventObj = events.find(event => event.id === id)
+
+  if(!eventObj){
+    console.log("event not found")
+    return
+  }
+   
+  if(!favorites[id]){
+    favorites[id] = {...eventObj, favorite: true}
+  }
+  renderfavorites()
+
+}
+
+function removeFromFavorite(id){
+  if(favorites[id]){
+    delete favorites[id]
+    renderfavorites()
+  }  
+}
+
+function renderfavorites(){
+  const favoritesList = document.getElementById('favorites-list')
+  favoritesList.innerHTML =''
+
+  for(const itemId in favorites){
+    const favorite = favorites[itemId]
+
+    const favoriteCard = document.createElement('div')
+    favoriteCard.classList.add('favorite-card')
+
+    favoriteCard.innerHTML = `
+      <p>${favorite.title} </p>
+    `
+    favoritesList.append(favoriteCard)
+  }
 }
 
 priceFilter.addEventListener("change", filterEvents);
