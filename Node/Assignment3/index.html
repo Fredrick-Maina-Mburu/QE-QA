@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <button id="add-item-btn">Add Item</button>
+    </nav>
+    <main>
+      <section id="data-list"></section>
+
+      <section id="cart">
+        <h2>Your Cart</h2>
+
+        <div id="cart-items"></div>
+
+        <div id="total-amount">Total: $<span id="total">0</span></div>
+      </section>
+    </main>
+
+    <div id="form-modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <h2 id="modal-title">Add Item</h2>
+        <form id="item-form">
+          <input type="hidden" id="item-id" />
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="number" id="price" placeholder="Price" required />
+          <input type="text" id="date" placeholder="Date" required />
+          <input type="text" id="location" placeholder="Location" required />
+          <input type="text" id="company" placeholder="Company" required />
+          <input type="text" id="imageUrl" placeholder="Image URL" required />
+          <div style="display: flex; justify-content: space-between">
+            <button type="submit">Save</button>
+            <button type="button" id="close-modal" onclick="closeModal()">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function closeModal() {
+        document.getElementById("form-modal").style.display = "none";
+        clearForm();
+      }
+      function clearForm() {
+        document.getElementById("item-form").reset();
+      }
+    </script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
