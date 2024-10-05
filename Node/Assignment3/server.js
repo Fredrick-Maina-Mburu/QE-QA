@@ -2,8 +2,6 @@ const fs = require('fs')
 const http = require('http')
 const path = require('path')
 
-
-
 function serveStaticFile(res, filePath, contentType, responseCode = 200) {
   fs.readFile(filePath, (err, content) => {
     if (err) {
@@ -48,6 +46,16 @@ const server = http.createServer((req, res) => {
       const data = require('./db.js').data;
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify(data));
+    }
+  }
+
+  if(req.url.startsWith('/view/') && req.method === 'GET'){
+    const id = req.url.split('/').pop()
+    let data = require('./db.js').data
+    data = data.filter(item => item.id == id)
+    if(data){
+      res.writeHead(200, {'Content-Type' : 'application/json'})
+      res.end(JSON.stringify(data, null, 2))
     }
   }
 

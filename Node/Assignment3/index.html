@@ -22,6 +22,17 @@
       </section>
     </main>
 
+    <div id="view-modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-btn" id="close-view-modal">&times;</span>
+        <img id="modal-image" src="" alt="Item Image" style="width: 100%; border-radius: 8px;">
+        <h3 id="modal-title"></h3>
+        <p id="modal-price"></p>
+        <p id="modal-date"></p>
+        <p id="modal-location"></p>
+      </div>
+    </div>
+
     <div id="form-modal" class="modal" style="display: none">
       <div class="modal-content">
         <h2 id="modal-title">Add Item</h2>
@@ -42,6 +53,7 @@
         </form>
       </div>
     </div>
+
 
     <script>
       function closeModal() {
