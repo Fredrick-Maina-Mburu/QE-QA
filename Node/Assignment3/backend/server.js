@@ -1,6 +1,6 @@
 const fs = require('fs')
 const http = require('http')
-const path = require('path')
+
 
 function serveStaticFile(res, filePath, contentType, responseCode = 200) {
   fs.readFile(filePath, (err, content) => {

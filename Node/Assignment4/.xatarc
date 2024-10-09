@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://FredrickMburu-s-workspace-pnaot2.us-east-1.xata.sh/db/products",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

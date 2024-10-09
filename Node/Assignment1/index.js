@@ -17,14 +17,14 @@ function serializeDirTree(rootDir, depth){
       const child = serializeDirTree(itemPath, depth - 1)
       if (child) children.push(child)
     }
-
-    return{
+    const obj = {
       path: rootDir ,
       name: path.basename(rootDir),
       type: 'dir',
       size: stats.size,
       children: children
     }
+    return obj
   } else {
     return{
       path:rootDir,

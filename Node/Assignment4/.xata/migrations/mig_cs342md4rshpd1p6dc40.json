@@ -1,0 +1,18 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs342md4rshpd1p6dc40",
+    "operations": [
+      {
+        "drop_table": {
+          "name": "events"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs342md4rshpd1p6dc40",
+  "parent": "mig_cs3420i2go8te7ad4nt0",
+  "schema": "public",
+  "startedAt": "2024-10-09T08:39:54.505133Z"
+}

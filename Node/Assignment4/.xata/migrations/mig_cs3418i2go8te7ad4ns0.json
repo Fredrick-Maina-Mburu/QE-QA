@@ -1,0 +1,18 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs3418i2go8te7ad4ns0",
+    "operations": [
+      {
+        "drop_table": {
+          "name": "image"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs3418i2go8te7ad4ns0",
+  "parent": "mig_cs3415q2go8te7ad4nr0",
+  "schema": "public",
+  "startedAt": "2024-10-09T08:36:51.67489Z"
+}
