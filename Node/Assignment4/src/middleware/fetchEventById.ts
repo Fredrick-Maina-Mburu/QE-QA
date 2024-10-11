@@ -13,7 +13,7 @@ async function fetchEventById(req: Request, res: Response, next: NextFunction): 
   try {
     const event = await xata.db.events.read(id);
     if (!event) {
-      res.status(404).json({ message: 'Event not found' });
+      next(new Error('Event not found'));
     }
 
     req.body.event = event;
