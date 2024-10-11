@@ -40,7 +40,7 @@ This project is an Event Management API that allows users to create, read, updat
    - Configure your Xata credentials in the project (refer to Xata documentation for details).
 5. Start the server:
    ```
-   npm start
+   npm run dev
    ```
    The server should now be running on `http://localhost:3000`.
 
