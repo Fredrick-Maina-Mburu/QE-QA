@@ -1,5 +1,4 @@
-
-import express, { Express, Request, Response, NextFunction } from "express";
+import  { Request, Response, NextFunction } from "express";
 import { Router } from "express";
 import { XataClient } from "../xata";
 import { validateRequest } from "../middleware/validateRequest";
